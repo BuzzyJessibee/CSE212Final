@@ -78,7 +78,7 @@ stack.pop()
 stack.pop()
 print(stack)
 ```
-[Solution](Stacks/stackexample.py)
+[Solution](stackexample.py)
 
 # Prove Example
 Requirements:
@@ -95,4 +95,4 @@ The reversed phrase is: tesnus eht otni smooz racecar ehT
 ```
 
 Have fun with this!
-[Solution](Stacks/stackprovesolution.py)
+[Solution](stackprovesolution.py)
