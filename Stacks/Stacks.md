@@ -9,7 +9,7 @@ When we remove a plate from the stack to use it, we call this a **pop** operatio
 
 Because of this, the first plate (the one at the **front**) won't be used for a while. 
 
-![](Stacks/platestack.PNG)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/3af4689dc334231b68426ca6f211173fcd006448/Stacks/platestack.PNG)
 
 While this might seem weird at first, let's look at one of the best examples of a stack: the undo stack.
 
@@ -20,17 +20,17 @@ In order to understand, let's break it down a bit.
 
 Consider the phrase "Jenny went to the market to buy apples". If we assume that each word is a plate on our stack, the stack would look as follows:
 
-![](Stacks/undostack1.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/3af4689dc334231b68426ca6f211173fcd006448/Stacks/undostack1.PNG)
 
 If we then used the **pop()** operation three times, then the stack would look like this:
 
-![](Stacks/undostack2.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/3af4689dc334231b68426ca6f211173fcd006448/Stacks/undostack2.PNG)
 
 Notice how we removed the top most three "plates", and the back of the stack became the word "market".
 
 Finally, let's add more words using the **push()** operation. We'll add "and", "bought", and "pears". Now our stack looks like this:
 
-![](Stacks/undostack3.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/3af4689dc334231b68426ca6f211173fcd006448/Stacks/undostack3.PNG)
 
 Since the stack is maintaining a history of what we typed, we know that we're going to get the commands in the order that we entered them in. Notice that the 5 commands at the start stayed the same throughout all three examples. If we pressed the undo button enough times, those would eventually be removed.
 
