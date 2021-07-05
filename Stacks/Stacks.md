@@ -9,7 +9,7 @@ When we remove a plate from the stack to use it, we call this a **pop** operatio
 
 Because of this, the first plate (the one at the **front**) won't be used for a while. 
 
-![](Stacks/platestack.png)
+![](Stacks/platestack.PNG)
 
 While this might seem weird at first, let's look at one of the best examples of a stack: the undo stack.
 
