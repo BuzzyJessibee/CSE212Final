@@ -23,7 +23,7 @@ If we used the value of the number to find it's number in the list, we might be 
 
 Let's put this into an expression: `index(n) = n`, where n is the number that we're adding. If we added 7, it would be placed in index 7. If we added 4 it would be placed in idex 4, and so forth. For this to work, we would need the size of our list to be exactly 10.
 
-![](setfor1digitnumbers.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/8f204c522ab2db1954c98a5f965d75aad48347b2/Sets/setfor1digitnumbers.PNG)
 
 The above shows several numbers added to the list according to the rule `index(n) = n`. In order to determine if a number existed in the list we would only need to use the formula to look up the index. This would result in O(1) perfomance.
 
@@ -38,7 +38,7 @@ Instead, let's talk about the modulo (%) operator. If we rewrote our expression 
 
 Let's put these and some other numbers in a table so that we can visualize this:
 
-![](setforbignumbers.PNG)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/8f204c522ab2db1954c98a5f965d75aad48347b2/Sets/setforbignumbers.PNG)
 
 > If we needed to make the list bigger, we would just add to the modulo at the end of the function. For example, our list size is `10` here, so we `% 10`. If it were 20 we would `% 20`, and so forth.
 
