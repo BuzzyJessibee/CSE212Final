@@ -84,7 +84,7 @@ Let's look at the following table:
 |member(value)|	Determines if "value" is in the set|`if value in my_set:`|O(1) - Performance of hashing the value (assuming good conflict resolution)|
 |size()|Returns the number of items in the set|`length = len(my_set)`|	O(1)|
 |union()|Returns every unique value in both sets|`set3 = set1 & set2`|	O(n)|
-|intersection()|Returns values that are the same in both sets |`set3 = set1 \| set2`|	O(1)|
+|intersection()|Returns values that are the same in both sets |`set3 = set1 \| set2`|	O(n)|
 
 # Practice Example
 Let's start with a simple example.
