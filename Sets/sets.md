@@ -87,10 +87,51 @@ Let's look at the following table:
 |intersection()|Returns values that are the same in both sets |`set3 = set1 \| set2`|	O(n)|
 
 # Practice Example
-Let's start with a simple example.
+Let's start with a simple example. - We'll use a set to see if all of the letters in a string are unique. Start with this base code and tests.
+
+```py
+def unique_letters(text):
+    """ 
+    Determine if there are any duplicate letters in the text provided
+    """
+    pass
+
+
+# Tests
+test1 = "abcdefghjiklmnopqrstuvwxyz"  # Expect True because all letters unique
+print(unique_letters(test1))
+
+test2 = "racecar"  # Expect False because r,a,c are repeated
+print(unique_letters(test2))
+
+test3 = "" 
+print(unique_letters(test3))          # Expect True because its an empty string
+```
 
 [Solution](setsexample.py)
 
 # Prove Example
+In this example, you will be implementing both the intersection and union functions **without** using the built in Python functions. 
+
+Start with this base code and tests. Good luck!
+
+```py
+def intersect(set1, set2):
+    pass
+
+def union(set1, set2):
+    pass
+
+# Tests
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+print(intersect(s1,s2))  # Should show {4, 5}
+print(union(s1,s2)) # Should show {1, 2, 3, 4, 5, 6, 7, 8}
+
+s1 = {5,8,3,4,7}
+s2 = {6,15,20,9,10}
+print(intersect(s1,s2))  # Should show an empty set
+print(union(s1,s2)) # Should show {3, 4, 5, 6, 7, 8, 9, 10, 15, 20}
+```
 
 [Solution](setsprovesolution.py)
