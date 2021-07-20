@@ -182,5 +182,144 @@ def _traverse_forward(self, node):
 Python does not have a built-in BST class. We have to make our own. However, there are packages that can be installed from other developers that provide implementations of the BST. Here are some common functions that BST's use:
 ![](https://github.com/LyrasaurusRose/CSE212Final/blob/d463ecbef4f581417b450cce0bf7e78aa4e2975e/Trees/bstoperationtable.png)
 # Practice Example
+For trees, we will be doing a two part example - the first part, we will be writing code to insert nodes into the tree, and in the second part we will be finding the height of the tree.
 
+We will start with the following base code:
+```py
+class BST:
+    """
+    Implement the Binary Search Tree (BST) data structure.
+    """
+
+    class Node:
+        """
+        Each node of the BST will have data and links to the 
+        left and right sub-tree. 
+        """
+
+        def __init__(self, data):
+            """ 
+            Initialize the node to the data provided.  Initially
+            the links are unknown so they are set to None.
+            """
+       
+            self.data = data
+            self.left = None
+            self.right = None
+
+    def __init__(self):
+        """
+        Initialize an empty BST.
+        """
+        self.root = None
+
+    def insert(self, data):
+        """
+        Insert 'data' into the BST.  If the BST
+        is empty, then set the root equal to the new 
+        node.  Otherwise, use _insert to recursively
+        find the location to insert.
+        """
+        if self.root is None:
+            self.root = BST.Node(data)
+        else:
+            self._insert(data, self.root)  # Start at the root
+
+    ###################
+    # Start Problem 1 #
+    ###################
+    def _insert(self, data, node):
+        """
+        This function will look for a place to insert a node
+        with 'data' inside of it.  The current sub-tree is
+        represented by 'node'.  This function is intended to be
+        called the first time by the insert function.
+        """
+ 	pass
+    
+    #################
+    # End Problem 1 #
+    #################
+
+    def __iter__(self):
+        """
+        Perform a forward traversal (in order traversal) starting from 
+	    the root of the BST.  This is called a generator function.
+        This function is called when a loop	is performed:
+
+        for value in my_bst:
+            print(value)
+
+        """
+        yield from self._traverse_forward(self.root)  # Start at the root
+        
+    def _traverse_forward(self, node):
+        """
+        Does a forward traversal (in-order traversal) through the 
+        BST.
+        """
+        if node is not None:
+            yield from self._traverse_forward(node.left)
+            yield node.data
+            yield from self._traverse_forward(node.right)
+    
+    def get_height(self):
+        """
+    Determine the height of the BST.  Note that an empty tree
+    will have a height of 0 and a tree with one item (root) will
+    have a height of 1.
+    
+    If the tree is empty, then return 0.  Otherwise, call 
+    _get_height on the root which will recursively determine the 
+    height of the tree.
+    """
+        if self.root is None:
+            return 0
+        else:
+            return self._get_height(self.root)  # Start at the root
+
+    ###################
+    # Start Problem 2 #
+    ###################
+    def _get_height(self, node):
+        """
+        Determine the height of the BST.  The height of a sub-tree 
+        (represented by 'node') is 1 plus the height of either the 
+        left sub-tree or the right sub-tree (whichever one is bigger).
+
+        This function intended to be called the first time by 
+        get_height.
+        """
+        pass
+
+    #################
+    # End Problem 2 #
+    #################
+
+# Sample Test Cases (may not be comprehensive) 
+print("\n=========== PROBLEM 1 TESTS ===========")
+tree = BST()
+tree.insert(5)
+tree.insert(3)
+tree.insert(7)
+tree.insert(4)
+tree.insert(10)
+tree.insert(1)
+tree.insert(6)
+for x in tree:
+    print(x)  # 1, 3, 4, 5, 6, 7, 10
+
+print("\n=========== PROBLEM 2 TESTS ===========")
+print(tree.get_height()) # 3
+tree.insert(6)
+print(tree.get_height()) # 3
+tree.insert(12)
+print(tree.get_height()) # 4
+```
+Your job for the practice problem is to write the `_insert` function. Once it is correct, the tests at the bottom will print out the commented line at the bottom.
+
+[Solution](https://github.com/LyrasaurusRose/CSE212Final/blob/bc88263396a83476340da110f3ef6db7abb37496/Trees/treespractice.py)
 # Prove Example
+Continue with the code that you have finished earlier. This time we will be working on the `_get_height` function. Your job for this one is to write a function that will figure out recursively which side is the longest, and find the height of the tree.
+
+[Solution](https://github.com/LyrasaurusRose/CSE212Final/blob/bc88263396a83476340da110f3ef6db7abb37496/Trees/treesprove.py)
