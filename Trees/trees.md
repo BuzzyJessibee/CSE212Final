@@ -7,7 +7,7 @@ Put simply, a node is just data, it can be text, a number, or anything really.
 # Binary Trees
 A tree whose elements have at most two children is called a `Binary Tree`. A Binary tree has two children, with the left child having a value **less** than the parent node, and the right child having a vaule **greater** than the parent node.
 
-![](basicbinarytree.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/d463ecbef4f581417b450cce0bf7e78aa4e2975e/Trees/basicbinarytree.PNG)
 
 ## Tricky things to keep in mind
 >I've labled a few common terms in the image above, however several terms can refer to one node. For example the **root node** is the **parent node** of the nodes '14' and '37' (those nodes are the root node's **child nodes**). However there is only ever `one` root node.
@@ -28,7 +28,7 @@ For example, let's take the value `20`, and do the following:
 4. The next node is 19, and 20 is greater than 19, so we go right.
 5. There is no node to the right of 19. We place 20 there.
 
-![](addnode.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/d463ecbef4f581417b450cce0bf7e78aa4e2975e/Trees/addnode.PNG)
 
 # A balancing act
 The process above is quite an efficient process. If we used a dynamic array or a linked list containing sorted values, we would have an O(n) operation time as we search for the location we needed to insert the data into the proper sorted position.
@@ -180,7 +180,7 @@ def _traverse_forward(self, node):
 
 # BST in Python
 Python does not have a built-in BST class. We have to make our own. However, there are packages that can be installed from other developers that provide implementations of the BST. Here are some common functions that BST's use:
-![](bstoperationtable.png)
+![](https://github.com/LyrasaurusRose/CSE212Final/blob/d463ecbef4f581417b450cce0bf7e78aa4e2975e/Trees/bstoperationtable.png)
 # Practice Example
 
 # Prove Example
